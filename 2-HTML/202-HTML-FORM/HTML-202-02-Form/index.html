@@ -7,6 +7,40 @@
     <title>Document</title>
   </head>
   <body>
-    Start coding here
+     <fieldset>
+        <legend>Personal Details</legend>
+        <br />
+        <label>Salutation</label>
+        <br>
+        <select name="salutation">
+            <option value=" ">--none--</option>
+            <option value="mr.">Mr.</option>
+            <option value="mrs.">Mrs.</option>
+            <option value="others">Others</option>
+        </select>
+        <br></br>
+        <label>FirstName: </label>
+        <input type="text" required>
+        <br></br>
+        <label>LastName: </label>
+        <input type="text" required>
+        <br></br>
+        <lable>Gender: </lable>
+        <input type="radio" name="gender" value="male">Male</input>
+        <input type="radio" name="gender" value="female">Female</input>
+        <input type="radio" name="gender" value="others">Others</input>
+        <br></br>
+        <label>Email: </label>
+        <input type="text" required>
+        <br></br>
+        <label>Date of Birth: </label>
+        <input type="date">
+        <br></br>
+        <label>Address: </label>
+        <br>
+        <textarea maxlength="20" rows="5" cols="20"></textarea>
+        <br></br>
+        <button type="submit" >Submit</button>
+    </fieldset>
   </body>
 </html>
