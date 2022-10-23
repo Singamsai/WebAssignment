@@ -5,8 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .header,.bird, .insta, .image{
+            height:20px;
+            width:20px;
+            margin:10px;
+        }
+        h1{
+            margin:0;
+        }
+        .bird, .insta,.image{
+            margin:0;
+            
+        }
+        .header-container{
+            display: flex;
+            justify-content: center;
+            
+        }
+        .main-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="main-container">
+        <div class="header-container">
+            <img class ="header" src="./bat&ball icon.png"/>
+            <h1>Virat Kohli</h1>
+            <img class ="header" src="./bat&ball icon.png"/>
+        </div>
+        <p style="text-align: center;">A spunky, chubby teenager with gelled hair shot to fame after leading India to glory in the Under-19 World Cup at Kuala Lumpur in early 2008. In an Indian team filled with saint-like icons worthy of their own <br >hagiographies, Virat Kohli, with his most un-Indian, 'bad-boy' intensity, would clearly be an outcast.</p>
+        <div class="iframe">
+            <h2 style="text-align: center; padding:10px;">Tweets <img class="bird" src="./bird.png"/></h2>
+            <iframe src="https://twitter.com/imVkohli?ref_src=twsrc%5Etfw" style="height:400px;width:500px;" title="Iframe Example"></iframe>
+            <h2 style="text-align: center;">Images <img class="image" src="./image icon.jpg"></a></h2>
+            <img src="https://www.cricketcountry.com/wp-content/uploads/2019/03/ViratKohli2ndODINagpur.jpg" style="height:400px;width:500px; "/>
+            <h2 style="text-align: center;">Instagram <img class="insta" src="./insta icon.jpg"/></h2>
+            <iframe src="https://www.instagram.com/virat.kohli/" scrolling="no" style="height:400px;width:500px; "or title="Iframe Example"></iframe>
+            <h2 style="text-align: center;">Google Map </h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!4v1641579940214!6m8!1m7!1sMbtp3-RWwYeQbFjS_lM0zQ!2m2!1d45.39699417317996!2d-75.68136068949613!3f258.24336448934645!4f-16.275050570181165!5f0.7820865974627469" style="height:400px;width:500px;" title="Iframe Example"></iframe>
+        </div>
+    </div>
 </body>
 </html>
