@@ -4,9 +4,77 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculator</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .main-container{
+            width:260px;
+            height: 220px;
+            background-color: rgb(230, 71, 97);
+            border-radius: 8px;
+            padding:10px;
+            box-shadow: 0px 4px rgba(0,0,0,0.5);
+        }
+        header{
+            padding:0 6px 6px 5px;
+            display: flex;
+            justify-content: space-between;
+        }
+        input{
+            width:150px;
+            border-radius: 10px;
+            background-color: rgba(122, 38, 201, 0.863);
+            border:none;
+        }
+        button{
+            font-size: 20px;
+            background-color:rgba(122, 38, 201, 0.863);
+            width: 52px;
+            height: 30px;
+            margin:2px;
+            border-radius: 10px;
+            border: none;
+            box-shadow: 0px 3px rgba(0,0,0,0.5);
+        }
+
+    </style>
 </head>
-<body>
-    <!-- start your code here -->
+<body >
+    <div style="background-color:rgba(122, 38, 201, 0.863); width:300px; height: 250px; display: flex; justify-content: center; align-items: center;"> 
+    <div class="main-container">
+        <header>
+            <button class="onoff" style="background-color: rgb(226, 226, 9);">C</button>
+            <input type="text" value="                                    0"/>
+        </header>
+        <table>
+            <tr>
+                <td><button>7</button></td>
+                <td><button>8</button></td>
+                <td><button>9</button></td>
+                <td><button style="background-color: rgb(226, 226, 9);">X</button></td>
+            </tr>
+            <tr>
+                <td><button>4</button></td>
+                <td><button>5</button></td>
+                <td><button>6</button></td>
+                <td><button style="background-color: rgb(226, 226, 9);">/</button></td>
+            </tr>
+            <tr>
+                <td><button>1</button></td>
+                <td><button>2</button></td>
+                <td><button>3</button></td>
+                <td><button style="background-color: rgb(226, 226, 9);">+</button></td>
+            </tr>
+            <tr>
+                <td><button>.</button></td>
+                <td><button>0</button></td>
+                <td><button style="background-color: gray;">=</button></td>
+                <td><button style="background-color: rgb(226, 226, 9);">-</button></td>
+            </tr>
+        </table>
+    </div>
+  </div>
 </body>
 </html>
