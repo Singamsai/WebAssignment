@@ -4,9 +4,132 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>linkedin</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: Arial;
+        }
+        .main-container{
+                width:100%;
+                height:100vh;
+                padding:0 0 0 150px;
+        }
+        .header{
+            display: flex;
+            justify-content: space-between;
+            width: 1025px
+        }
+        .logo{
+            display: flex;
+        }
+        .in{
+            background-color: rgb(84, 84, 250);
+            color:white;
+            margin:17px 0 ;
+            height: 27px;
+            font-size: 26px;
+            padding:0 1px;
+            border-radius: 3px;
+        }
+        .options{
+            display: flex;
+            justify-content: space-between;
+            gap:25px
+        }
+        .icon{
+            margin-left:12px;
+        }
+        .iconnames{
+            margin:0;
+            color:gray;
+        }
+        .signin{
+            height: 45px;
+            width: 85px;
+            border-color: rgb(85, 85, 241);
+            color:rgb(85, 85, 241);
+            background-color: white;
+            border-radius: 20px;
+        }
+        .body-container{
+            padding:30px 0;
+            width:1190px;
+            display: flex;
+            justify-content: space-between;
+        }
+        h1{
+            font-size: 40px;
+            color:rgb(230, 142, 142);
+            font-weight: 2;
+        }
+        .login{
+            width:330px;
+            height:50px;
+        }
+        .declaration{
+            font-size: 10px;
+        }
+        .agree-join{
+            background-color: blueviolet;
+            border:none;
+            width:330px;
+            height:50px;
+            border-radius: 20px;
+            color:white;
+            text-decoration: none;
+        }
+        .image{
+            width:700px;
+            height: 540px;
+        }
+    </style>
+
 </head>
 <body>
-    <!-- start your code here -->
+    <div class="main-container">
+        <div class="header">
+            <div class="logo">
+                <h2 style="color:rgb(84, 84, 250);margin-right:3px;"><b>Linked</b></h2>
+                <p class="in"><b>in</b></p>
+            </div>
+            <div class="options">
+                <div class="option">
+                    <img class="icon" src="./discover.PNG">
+                    <p class="iconnames">Discover</p>
+                </div>
+                <div class="option">
+                    <img class="icon" src="./people.PNG">
+                    <p class="iconnames">People</p>
+                </div>
+                <div class="option">
+                    <img class="icon" src="./learning.PNG">
+                    <p class="iconnames">Learning</p>
+                </div>
+                <div class="option">
+                    <img class="icon" src="./jobs.PNG" style="margin-top:2px;">
+                    <p class="iconnames" style="margin:1px 0 0 10px">Jobs</p>
+                </div>
+                <p style="font-size:40px; margin:0" >|</p>
+                <p style="color:rgb(83, 79, 79); font-size:13px;margin-top: 20px;">Join now</p>
+                <button class="signin">sign in</button>
+            </div>
+        </div>
+        <div class="body-container">
+            <div class="left-container">
+               <h1>Join the biggest <br>professional community</h1>
+               <input type="email" class="login" placeholder="Email"/>
+               <br><br>
+               <input type="email" class="login" placeholder="Password (8+ characters)"/>
+               <p class="declaration">By clicking Agree & Join, you agree to the LinkedIn <a href="" style="text-decoration: none;">User <br> Agreement, Privacy Policy</a> and <a href="" style="text-decoration: none;">Cookie Policy.</a></p> 
+               <button class="agree-join">Agree & Join</button>
+               <p>________________ or _______________</p>
+               <p style="margin-left: 50px;">Already on Linkedin? <a style="text-decoration: none;" href="">Sign in</a></p>
+            </div>
+            <div class="right-container">
+                <img class="image" src="./image.PNG" alt="group of people" />
+            </div>
+        </div>
+    </div>
 </body>
 </html>
