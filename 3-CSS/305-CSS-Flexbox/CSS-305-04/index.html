@@ -4,9 +4,136 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>flipkart</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .main-container{
+            width:100%;
+                
+        }
+        .header{
+            width:100%;
+            height: 40px;
+            background-color: rgb(85, 85, 243);
+            padding: 3px 130px 0 130px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .flipkart{
+            margin:0;
+            color:white;   
+        }
+        .search{
+            display: flex; 
+            width:400px;
+            height:25px;
+            margin:5px ;
+        }
+        .search-box{
+            border:none;
+            width:380px;
+            height: 25px;
+            font-size: 10px;
+            padding-left: 10px;
+        }
+        img{
+            width:14px;
+            height: 14px;
+            background-color: white;
+        }
+        .login{
+            height: 20px;
+            width: 80px;
+            border:none;
+            margin:7px;
+            color:rgb(99, 99, 245);
+        }
+        .options{
+            display: flex;
+            gap:30px;
+            padding:0 0 0 25px;
+        }
+        .option{
+            color: whitesmoke;  
+            font-size: 15px;
+            margin:9px;
+        }
+        .types{
+            font-size: 12px;
+            margin: 0;
+        }
+        .image{
+            height: 40px;
+            width:45px;
+            margin-top: 5px;
+        }
+    </style>
 </head>
 <body>
-    <!-- start your code here -->
+    <div class="main-container">
+        <div class="header">
+            <div class="name">
+                <h3 class="flipkart">Flipkart</h2>
+                <div style="display:flex; gap:5px;">
+                    <p class="flipkart" style="font-size:10px;"><i>Explore </i></p>
+                    <p class="flipkart" style="font-size:10px;color:yellow"><i> Plus+</i></p>
+                </div>
+            </div>
+            <div class="search">
+                <input class="search-box" type="text" placeholder="Search for products, brands and more"/>
+                <button style="background-color: white; border:none; padding-top:5px;"><img src="./search icon.png"/></button>
+            </div> 
+            <button class="login">Login</button>  
+            <div class="options">
+                <p class="option"> Become a Seller</p>
+                <p class="option"> More<img src="./down cap icon.png" style="width: 8px; height:7px" /></p>
+                <p class="option"><img src="./cart icon.jpg" style="width: 11px; height:11px" /> Cart</p>
+            </div>          
+        </div>
+        <div class="body" style="display: flex; justify-content:space-evenly">
+            <div class="type">
+                <img class="image" src="./topoffers.PNG">
+                <p class="types">Top Offers</p>
+            </div>
+            <div class="type">
+                <img class="image" src="./grocery.PNG">
+                <p class="types">Grocery</p>
+            </div>
+            <div class="type">
+                <img class="image" src="./mobiles.PNG">
+                <p class="types">Mobiles</p>
+            </div>
+            <div class="type">
+                <img class="image" src="./Fashion.PNG">
+                <p class="types">Fashion <img src="./down cap icon.png" style="width: 6px; height:5px" /></p>
+            </div>
+            <div class="type">
+                <img class="image" src="./Electronics.PNG">
+                <p class="types">Electronic <img src="./down cap icon.png" style="width: 6px; height:5px" /></p>
+            </div>
+            <div class="type">
+                <img class="image" src="./Home.PNG">
+                <p class="types">Home <img src="./down cap icon.png" style="width: 6px; height:5px" /></p>
+            </div>
+            <div class="type">
+                <img class="image" src="./Appliances.PNG">
+                <p class="types">Appliances</p>
+            </div>
+            <div class="type">
+                <img class="image" style="margin-left: -10px;" src="./travel.PNG" >
+                <p class="types">Travel</p>
+            </div>
+            <div class="type">
+                <img class="image" style="margin-left: 20px;" src="./Beauty.PNG">
+                <p class="types" >Beauty, Toys & More <img src="./down cap icon.png" style="width: 6px; height:5px" /></p>
+            </div>
+            <div class="type">
+                <img class="image" src="./Twowheeler.PNG">
+                <p class="types">2-Wheelers</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
