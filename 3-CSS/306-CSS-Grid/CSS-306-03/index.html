@@ -4,9 +4,163 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Grid Based Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css" integrity="sha512-HHsOC+h3najWR7OKiGZtfhFIEzg5VRIPde0kB0bG2QRidTQqf+sbfcxCTB16AcFB93xMjnBIKE29/MjdzXE+qw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            box-sizing: border-box;
+            margin:0;
+        }
+        .main-container{
+            width: 100%;
+            height: 100vh;
+        }
+        .heading-bar{
+            width:98%;
+            height: 40px;
+            background-color: rgb(236, 232, 232);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding:0 10px;
+        }
+        .head-container{
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            padding:15px 30%;
+            
+        }
+        .buttons{
+            background-color: #3d2b1c;
+            color: linen;
+            border: none;
+            height: 20px;
+            width: 80px;
+            font-size: 10px;
+            border-radius: 3px;
+        }
+        .box1{
+            height: 115px;
+            width: 280px;
+            border:2px solid gray;
+            border-left: none;
+        }
+        .box2{
+            height: 115px;
+            width: 350px;
+            border:2px solid gray;
+        }
+        .box3{
+            height: 145px;
+            width: 330px;
+            border: 2px solid gray;
+            border-left: none;
+        }
+        .box4{
+            height: 145px;
+            width: 300px;
+            border:2px solid gray;
+        }
+        .thirdbox{
+            height: 260px;
+            width:277px;
+            border:2px solid gray;
+        }
+        .fourthbox{
+            height: 260px;
+            width:399px;
+            border:2px solid gray;
+        }
+        .first-box{
+            height: 200px;
+            width:400px;
+            border:2px solid gray;
+            border-left: none;
+        }
+        .second-box{
+            height: 200px;
+            width:536px;
+            border:2px solid gray;
+        }
+        .third-box{
+            height: 200px;
+            width:369px;
+            border:2px solid gray;
+        }
+        .box-container{
+            margin:0 30px;
+        }
+        .footer{
+            margin:30px 20px;
+            height: 40px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between; 
+            background-color: rgb(214, 211, 211);
+        }
+        .leftsided{
+            width:600px;
+            display: flex;
+            justify-content: space-evenly;
+            color: rgb(77, 76, 76);
+            padding-bottom: 7px;
+            font-size: 13px;
+            font-family: 'Raleway', sans-serif; 
+        }
+        .rightsided{
+            color: rgb(77, 76, 76);
+            font-size: 13px;
+            padding-right: 15px;
+            padding-bottom: 7px;
+            font-family: 'Raleway', sans-serif;
+        }
+    </style>
 </head>
 <body>
-    <!-- start your code here -->
+    <div class="main-container">
+        <div class="heading-bar">
+            <i class="fa-solid fa-ellipsis" style="font-size: 4rem;  color:gray;"></i>
+            <i class="fa-solid fa-up-right-and-down-left-from-center" style="color:gray;"></i>
+        </div>
+        <div class="head-container">
+            <button class="buttons">HOME</button>
+            <button class="buttons">ABOUT</button>
+            <img class="logo" src="./logo.PNG">
+            <button class="buttons">MENU</button>
+            <button class="buttons">CONTACT</button>
+        </div>
+        <div class="box-container" style="display:flex;border-top: 2px solid gray;">
+            <div>
+                <div class="firstbox" style="display:flex;">
+                    <div class="box1"><img src="./box1.PNG" style="height: 110px;width:275px"></div>
+                    <div class="box2"><img src="./box2.PNG" style="height: 110px;width:275px"></div>
+                </div>
+                <div class="secondbox" style="display:flex;">
+                    <div class="box3"><img src="./box3.PNG" style="height: 140px;width:325px"></div>
+                    <div class="box4"><img src="./box4.PNG" style="height: 140px;width:295px"></div>
+                </div>
+            </div>
+            <div class="thirdbox"><img src="./box5.PNG" style="height: 255px;width:269px;"></div>
+            <div class="fourthbox"><img src="./box6.PNG" style="height: 255px;width:397px;""></div>   
+        </div>
+        <div class="box-container" style="display: flex; border-bottom: 2px solid gray;">
+            <div class="first-box"><img src="./box7.PNG" style="height: 195px;width:395px"></div> 
+            <div class="second-box"><img src="./box8.PNG" style="height: 195px;width:532px"></div> 
+            <div class="third-box" ><img src="./box9.PNG" style="height: 195px;width:370px"></div> 
+        </div>
+        <div class="footer">
+            <div class="leftsided">
+                <p>HOME</p>
+                <p>ABOUT</p>
+                <p>MENU</p>
+                <p>CONTACT</p>
+                <p>|</p>
+                <p>O MERCER TAVERN 2013</p>
+            </div>
+            <P class="rightsided">SITE BY VERSETT</P>
+        </div>
+    </div>
 </body>
 </html>
