@@ -4,9 +4,79 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Button-Hover</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        p{
+            font-weight: 1000;
+            margin-top:19px;
+            font-size: 25px;
+        }
+        .main-container{
+            margin: 25px;
+        }
+        .hover1{
+            height: 40px;
+            width:120px;
+            background-color: rgb(247, 66, 66);
+            color:white;
+            cursor: pointer;
+            border:1px solid  #fff;
+        }
+        .first{
+            width:120px;
+            display: flex;
+            flex-direction: column;
+        }
+        .links{
+            width:150px;
+            display: none;
+            background-color: linen;
+            z-index: 1;
+            margin-left: 29px;
+        }
+        .links a{
+            color:rgb(163, 155, 155);
+            padding:12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .links a:hover{
+            background-color: rgb(248, 225, 202);
+            color:black;
+        }
+        .first:hover .links{
+            display: block;
+        }      
+    </style>
 </head>
 <body>
-    <!-- start your code here -->
+    <div class="main-container">
+        <div class="first" >
+            <div style="display: flex; gap:10px;">
+                <p style="margin: 0;">1.</p> 
+                <button class="hover1">Hover Me</button>
+            </div>
+            <div class="links">
+                <a href="">Link1</a>
+                <a href="">Link2</a>
+                <a href="">Link3</a>
+            </div>
+        </div>
+        <br><br>
+        <div class="first" >
+            <div style="display: flex; gap:10px;">
+                <p style="margin: 0;">2.</p> 
+                <button class="hover1" style="background-color:rgb(245, 171, 33) ;">Hover Me</button>
+            </div>
+            <div class="links">
+                <a href="">Link1</a>
+                <a href="">Link2</a>
+                <a href="">Link3</a>
+            </div>
+        </div>    
+    </div>
 </body>
 </html>
