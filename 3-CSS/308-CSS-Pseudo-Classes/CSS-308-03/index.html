@@ -5,8 +5,191 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            box-sizing: border-box;
+            margin:0;
+        }
+        .main-container{
+            position: relative;
+            width: 100%;
+            height:100vh;
+        }
+        header{
+            width:100%;
+            height:58px;
+            background-color: rgb(248, 210, 139);
+            position: fixed;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding:0 40px;
+            box-shadow: 0 3px rgb(240, 238, 238);
+        }
+        .right{
+            display: flex;
+            gap:35px;
+        }
+        .name{
+            font-size: 25px;
+            font-weight:1000 ;
+        }
+        .option{
+            padding:20px 0;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color:rgb(117, 75, 75);
+            font-size: 16px;
+        }
+        .option:hover{
+            color:rgb(161, 159, 159);
+            border-top: 8px solid gray;
+        }
+        .hovering{
+            display: flex;
+            justify-content: center;
+        }
+        .aboutoptions{
+            display: none;
+            background-color: linen;
+            width:120px;
+            z-index: 1;
+            position: relative;
+        }
+        .aboutoptions a{
+            color:rgb(88, 87, 87);
+            padding:10px;
+            display: block;
+            text-decoration: none;
+        }
+        .aboutoptions a:hover{
+            background-color: rgb(185, 182, 182);
+            color:white;
+        }
+        .hovering:hover .aboutoptions{
+            display: block;
+            position: absolute;
+            margin-top: 60px;
+        }
+        .body-container{
+            padding:60px 140px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .left{
+            width:650px;
+        }
+        .left p{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            color:rgb(82, 81, 81);
+        }
+        .icons{
+            padding:20px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .footer-one{
+            width:100%;
+            height: 200px;
+            background-color: #444444;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap:15px;
+        }
+        .buttons{
+            height: 50px;
+            padding:10px 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            border-radius: 5px;
+            border: none;
+        }
+        .footer-two{
+            width:100%;
+            height: 200px;
+            background-color: #143c44;
+            text-align: center;
+            padding-top: 40px;
+
+        }
+        .footer-two p{
+            color:white;
+        }
+        .logoicon{
+            margin-top:-70px;
+            position: absolute;
+            right: 80px;
+            z-index: 1;
+        }
+        .logoicon .logo{
+            position: fixed;
+            height: 50px;
+            width: 50px;
+            border-radius: 60%;
+        }
+    </style>
 </head>
 <body>
-    <!-- start your code here -->
+    <div class="main-container">
+        <header>
+            <img src="https://www.submerge.in/wp-content/uploads/2016/08/SubmergeLogo-300x90.png" width="150" height="45" alt="Submerge" loading="lazy">
+            <div class="right">
+                <p class="option">Artists</p>
+                <p class="option">Events</p>
+                <div class="hovering">
+                    <p class="option" id="about">About <i class="fa-solid fa-angle-down"></i></p>
+                    <div class="aboutoptions">
+                        <a href="">Properties</a>
+                        <a href="">Blog</a>
+                    </div>
+                </div>
+                <p class="option">Book an Artist</p>
+                <p class="option">Shop</p>
+            </div>
+        </header>
+        <div class="body-container">
+            <div class="left">
+                <h2 style="font-size: 30px;">Nikhil Chinnapa</h2>
+                <br><br>
+                <p>To say that Nikhil Chinapa has donned many an avatar during his career, is like saying it snows in Alaska; a bit of an understatement. He morphs from DJ to VJ to MC to Music Promoter to Festival Director —some of his best known avatars — with amazing fluidity.</p>
+                <br>
+                <p>He studied Architecture and graduated with a Thesis in Hospital Design. A year later and for reasons that scientists are still trying to understand, Nikhil joined MTV. He said, “I think it’ll be fun.” For once, he was right.</p>
+                <br>
+                <p>At MTV, Nikhil has hosted almost every show the channel has aired. From MTV Select – MTV’s longest running show, (it aired continuously for 10 years) to being the host of Splitsvilla, a judge on Roadies as well as Rock On and now host of MTV Mashups</p>
+                <br>
+                <p>Nikhil’s Mom still thinks he’s an idiot though and should get a real job.</p>
+                <br>
+                <p>As a popular VJ, Nikhil got to spend a lot of time around his first love, music. In 2001, a conversation between friends resulted in the launch of Submerge — India’s first, and now largest Indian Electronic Dance Music (EDM) company in India.</p>
+                <br>
+                <p>By now, Nikhil had begun to DJ professionally and plays, well… whatever he feels like. His sets are moody, varied, often erratic but usually fun. Most of his sets feature frantic foot-stomping and the random flailing of arms – sometimes by him. They also feature music – the kind that has a repetitive monotonous beat and is best enjoyed at dangerous decibel levels.</p>
+                <br>
+                <p>Nikhil was also the co-founder of Sunburn. He is now the Festival Curator and partner of Vh1 Supersonic, Goa’s brand new beach music festival.</p>
+            </div>
+            <div class="rightside">
+                <img src="https://i0.wp.com/www.submerge.in/wp-content/uploads/2016/08/Nikhil-Chinapa-650x500.jpg?fit=650%2C500&ssl=1" width="325" height="250" alt="Nikhil Chinapa" loading="lazy">
+                <div class="icons">
+                    <i class="fab fa-instagram" style="font-size:25px;"></i>
+                    <i class="fa-brands fa-soundcloud" style="font-size:25px;"></i>
+                    <i class="fab fa-facebook-f" style="font-size:25px;"></i>
+                </div>    
+            </div>
+        </div>
+        <div class="footer-one">
+            <button class="buttons">VIEW OTHER ARTISTS</button>
+            <button class="buttons">VIEW EVENTS</button>
+        </div>
+        <div class="footer-two">
+            <img src="https://www.submerge.in/wp-content/uploads/2016/08/SubmergeLogo-white-300x90.png" width="150" height="45" color="white" alt="Submerge" loading="lazy">
+            <br>
+            <p>39/40, Shop #2, Sethi Niwas, 4th Rd, Khar West , Opp Bharat Bank, Mumbai 400 052</p>
+            <br>
+            <p>P: +91-9923872635 |  E: info@submerge.in</p>
+        </div>
+        
+    </div>
+    <div class="logoicon">
+        <img class="logo" src="./logo.PNG" />
+    </div>
 </body>
 </html>
