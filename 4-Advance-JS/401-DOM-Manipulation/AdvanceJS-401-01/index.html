@@ -7,6 +7,17 @@
     <title>Document</title>
   </head>
   <body>
-    Start your code here
+    <center>
+      <input type="text"/>
+      <p id="wrote"></p>
+    </center>
+    <script>
+      let inputName = document.getElementsByTagName('input')[0];
+      let text = document.getElementById('wrote');
+
+      inputName.addEventListener('keyup', ()=>{
+        text.innerHTML=inputName.value;
+      })
+    </script>
   </body>
 </html>
