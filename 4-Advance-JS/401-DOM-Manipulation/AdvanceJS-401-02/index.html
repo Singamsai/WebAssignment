@@ -5,8 +5,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      *{
+        box-sizing: border-box;
+      }
+      .child-boxes{
+        height: 100vh;
+        width:100%;
+        border: 1px solid black;
+        display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap:5px;
+      }
+      p{
+        height: 30px;
+        width:100px;
+        border-radius: 5px;
+        border: 2px solid  black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin:0; 
+      }
+    </style>
   </head>
   <body>
-    Start your code here
+    <div class="child-boxes">
+      <p>1st child</p>
+      <p>2nd child</p>
+      <p>3rd child</p>
+      <p>4th child</p>
+      <p>5th child</p>
+      <p>6th child</p>
+      <p>7th child</p>
+      <p>8th child</p>
+      <p>9th child</p>
+      <p>10th child</p>
+      <p>11th child</p>
+      <p>12th child</p>
+      <p>13th child</p>
+      <p>14th child</p>
+      <p>15th child</p>
+      <p>16th child</p>
+      <p>17th child</p>
+    </div>
+    <script>
+      let childs=document.getElementsByTagName('p');
+      for(let i=0;i<childs.length;i++){
+        if(i%2!=0){
+          childs[i].style.background= 'lime';
+          childs[i].style.color= 'white';
+        }
+      }
+      childs[0].style.background='blue';
+      childs[0].style.color= 'white';
+      childs[8].style.background='green';
+      childs[8].style.color= 'white';
+      childs[16].style.background='palevioletred';
+      childs[16].style.color= 'white';
+    </script>
   </body>
 </html>
