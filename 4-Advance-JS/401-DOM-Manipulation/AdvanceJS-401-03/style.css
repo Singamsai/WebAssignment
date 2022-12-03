@@ -1,0 +1,36 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    
+}
+.heading{
+    margin-top:50px;
+    margin-left:500px; 
+    font-size: 50px; 
+}
+main{
+    width:60%;
+    height:500px;
+    margin:auto;
+    margin-top: 100px;
+    position: relative;
+    overflow: hidden;
+}
+.slide{
+    width:100%;
+    height: 100%;
+    position: absolute;
+    transition: 1s;
+}
+.buttons{
+    position: absolute;
+    display: flex;
+    gap:1033px;
+    top:450px;
+    left:365px;
+}
+.buttons button{
+    font-size: 25px;
+    padding:5px;
+}
