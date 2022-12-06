@@ -4,9 +4,30 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Creating Image Element</title>
   </head>
   <body>
-    Start your code here
+    <center>
+      <h1 style="color:red">Geekster</h1>
+      <h3>Click on the button to create image element</h3>
+      <button id="create-img">click here</button>
+      <div id="images"></div>
+    </center>
+    <script>
+      const createImg = document.getElementById('create-img');
+      const images = document.getElementById('images');
+      let image = document.createElement('img');
+      image.setAttribute('class','image1');
+      image.setAttribute('src', 'https://static.businessworld.in/article/article_extra_large_image/1620727204_yRZbrh_Untitled.png');
+      image.setAttribute('width', '200px');
+      image.setAttribute('height', '150px');
+      let hTag = document.createElement('h2');
+      hTag.innerText='Image Element Added.';
+      hTag.style.color='red';
+      createImg.addEventListener('click', ()=>{
+        images.appendChild(hTag);
+        images.appendChild(image);
+      })
+    </script>
   </body>
 </html>
