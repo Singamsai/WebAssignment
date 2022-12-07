@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #additems{
+            line-height: 2.5;
+        }
+    </style>
+</head>
+<body>
+    <div id="main-container">
+        <h1>My shopping list</h1>
+        <span>Enter a new item: </span>
+        <input type="text" id="item_name"/>
+        <button id="add_item_button">Add item</button>
+        <ul id="additems"></ul>
+    </div>
+    <script>
+        const itemName = document.getElementById('item_name');
+        const addItemButton = document.getElementById('add_item_button')
+        const itemList = document.getElementById('additems');
+
+        addItemButton.addEventListener('click', ()=>{
+                let item=document.createElement('li');
+                item.innerText=itemName.value;
+                if(itemName.value.length>1){
+                    itemList.append(item);
+                }
+                const delet = document.createElement('button');
+                delet.innerText = 'delete';
+                if(itemName.value.length>1){
+                item.append(delet);
+                delet.style.marginLeft='5%';
+                itemName.value="";
+                }
+                delet.addEventListener('click', ()=>{
+                    item.remove();
+                    delet.remove();
+                })
+            })
+    </script>
+</body>
+</html>
