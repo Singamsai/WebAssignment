@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    Start your code here
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keycode</title>
+  <STYLE>
+    #demo2{
+      font-size: 50px;
+    }
+  </STYLE>
+</head>
+<body onkeydown="KeyCode(event)">
+  <div id="main-container">
+    <center>
+      <h1 id="heading">Press any Keyboard Key</h1>
+      <input type="text"  id="input" style="border: none;outline:none;">
+      <p> <span id="demo2"></span></p>
+    </center>
+  </div>
+  <script>
+    const heading = document.getElementById('heading');
+    function KeyCode(event){
+      var char = event.key;
+      var key = event.keyCode;
+      document.getElementById("demo2").innerHTML =  key;
+      heading.innerHTML="You pressed "+ char;
+    }
+  </script>
+</body>
 </html>
