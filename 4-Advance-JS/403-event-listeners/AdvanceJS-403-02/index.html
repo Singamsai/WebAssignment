@@ -37,27 +37,22 @@
       }
     </style>
   </head>
-  <body>
+  <body id="body">
     <div id="heading_container">
       <h1 id="heading">Drum 🥁 Kit</h1>
     </div>
     <div id="buttons_container">
-      <button id="w"><img src="./w.PNG" class="image"></button>
-      <button id="a"><img src="./a.PNG" class="image"></button>
-      <button id="s"><img src="./s.PNG" class="image"></button>
-      <button id="d"><img src="./d.PNG" class="image"></button>
-      <button id="j"><img src="./j.PNG" class="image"></button>
-      <button id="k"><img src="./k.PNG" class="image"></button>
-      <button id="l"><img src="./l.PNG" class="image"></button>
+      <button id="w"><img src="./w.PNG" class="image" id="w1"></button>
+      <button id="a"><img src="./a.PNG" class="image" id="a1"></button>
+      <button id="s"><img src="./s.PNG" class="image" id="s1"></button>
+      <button id="d"><img src="./d.PNG" class="image" id="d1"></button>
+      <button id="j"><img src="./j.PNG" class="image" id="j1"></button>
+      <button id="k"><img src="./k.PNG" class="image" id="k1"></button>
+      <button id="l"><img src="./l.PNG" class="image"  id="l1"></button>
     </div>
     <script>
-      const wButton = document.getElementById('w');
-      const aButton = document.getElementById('a');
-      const sButton = document.getElementById('s');
-      const dButton = document.getElementById('d');
-      const jButton = document.getElementById('j');
-      const kButton = document.getElementById('k');
-      const lButton = document.getElementById('l');      
+      const body = document.getElementById('body');
+
       const audio1 = new Audio('sounds_crash.mp3');
       const audio2 = new Audio('sounds_tom-2.mp3');
       const audio3 = new Audio('sounds_tom-3.mp3');
@@ -66,26 +61,9 @@
       const audio6 = new Audio('sounds_tom-4.mp3');
       const audio7 = new Audio('sounds_kick-bass.mp3');
 
-      wButton.addEventListener('click',()=>{
-        audio1.play(); 
-      })
-      aButton.addEventListener('click',()=>{
-        audio2.play(); 
-      })
-      sButton.addEventListener('click',()=>{
-        audio3.play(); 
-      })
-      dButton.addEventListener('click',()=>{
-        audio4.play(); 
-      })
-      jButton.addEventListener('click',()=>{
-        audio5.play(); 
-      })
-      kButton.addEventListener('click',()=>{
-        audio6.play(); 
-      })
-      lButton.addEventListener('click',()=>{
-        audio7.play(); 
+      body.addEventListener('click',(e)=>{
+        var node = e.target.getAttribute('id');
+        makesound(node[0]);
       })
       document.addEventListener('keypress', function(event){
         makesound(event.key);
