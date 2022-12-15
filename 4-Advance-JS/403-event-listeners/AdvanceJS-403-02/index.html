@@ -4,9 +4,118 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Drum Kit</title>
+    <style>
+      *{
+        box-sizing: border-box;
+      }
+      body{
+        text-align: center;
+        background-color: #283149;
+      }
+      h1{
+        font-size: 5rem;
+        color: #DBEDF3;
+        font-family: "Arvo", cursive;
+        text-shadow: 3px 0 #DA0463;
+      }
+      #drum{
+        border-radius: 12% 12% 50% 50%;
+        height: 30px;
+      }
+      #w,#a,#s,#d,#j,#k,#l{
+        background-color: transparent;
+        border: none;
+      }
+      #buttons_container{
+        margin: 200px  0 0 50px;
+      }
+      .image{
+        width:180px;
+        height: 180px;
+        border-radius: 10px;
+      }
+    </style>
   </head>
   <body>
-    Start your code here
+    <div id="heading_container">
+      <h1 id="heading">Drum 🥁 Kit</h1>
+    </div>
+    <div id="buttons_container">
+      <button id="w"><img src="./w.PNG" class="image"></button>
+      <button id="a"><img src="./a.PNG" class="image"></button>
+      <button id="s"><img src="./s.PNG" class="image"></button>
+      <button id="d"><img src="./d.PNG" class="image"></button>
+      <button id="j"><img src="./j.PNG" class="image"></button>
+      <button id="k"><img src="./k.PNG" class="image"></button>
+      <button id="l"><img src="./l.PNG" class="image"></button>
+    </div>
+    <script>
+      const wButton = document.getElementById('w');
+      const aButton = document.getElementById('a');
+      const sButton = document.getElementById('s');
+      const dButton = document.getElementById('d');
+      const jButton = document.getElementById('j');
+      const kButton = document.getElementById('k');
+      const lButton = document.getElementById('l');      
+      const audio1 = new Audio('sounds_crash.mp3');
+      const audio2 = new Audio('sounds_tom-2.mp3');
+      const audio3 = new Audio('sounds_tom-3.mp3');
+      const audio4 = new Audio('sounds_tom-1.mp3');
+      const audio5 = new Audio('sounds_snare.mp3');
+      const audio6 = new Audio('sounds_tom-4.mp3');
+      const audio7 = new Audio('sounds_kick-bass.mp3');
+
+      wButton.addEventListener('click',()=>{
+        audio1.play(); 
+      })
+      aButton.addEventListener('click',()=>{
+        audio2.play(); 
+      })
+      sButton.addEventListener('click',()=>{
+        audio3.play(); 
+      })
+      dButton.addEventListener('click',()=>{
+        audio4.play(); 
+      })
+      jButton.addEventListener('click',()=>{
+        audio5.play(); 
+      })
+      kButton.addEventListener('click',()=>{
+        audio6.play(); 
+      })
+      lButton.addEventListener('click',()=>{
+        audio7.play(); 
+      })
+      document.addEventListener('keypress', function(event){
+        makesound(event.key);
+      })
+      function makesound(key){
+        switch(key){
+            case 'w':
+              audio1.play();
+              break;
+            case 'a':
+              audio2.play();
+              break;
+            case 's':
+              audio3.play();
+              break;
+            case 'd':
+              audio4.play();
+              break;
+            case 'j':
+               audio5.play();
+              break;
+            case 'k':
+              audio6.play();
+              break;
+            case 'l':
+              audio7.play();
+              break;
+            default: console.log('press key');
+        }
+      }
+    </script>
   </body>
 </html>
