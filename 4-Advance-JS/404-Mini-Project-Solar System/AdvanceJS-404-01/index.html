@@ -1,12 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    Start your code here
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .main-container{
+            height: 100vh;
+            width:100%;
+            text-align: center;
+            background: url("https://raw.githubusercontent.com/geeksterin/WebCurriculum/master/Advance%20Js/Day-04/Project%20image/galaxy.gif");
+        }
+        #galaxy{
+            position: absolute;
+            z-index: -1;
+            left:1px;
+            top:1px;
+            height: 100vh;
+            width:100%;
+        }
+        #heading{
+            color:white;
+            padding-top:10px;
+            margin-bottom: 50px;
+            font-size: 45px;
+        }
+        #mass-info{
+            height: 40px;
+            width:250px;
+            border-radius: 5px;
+        }
+        #planets{
+            height: 40px;
+            width:170px;
+            border-radius: 5px;
+        }
+        #calculateweight{
+            height: 40px;
+            width:130px;
+            border-radius: 5px;
+            background-color: rgba(153, 152, 152, 0.685);
+            color:white;
+        }
+        #stable-earth{
+            margin-top:20px;
+            background-color: rgb(211, 211, 211, 0.139);
+            width:60%;
+            margin-left:270px;     
+            padding:10px;      
+        }
+        #planet{
+            width:60%;
+            margin-top:20px;
+            margin-left:270px;
+            padding:10px;
+            background-color: rgb(211, 211, 211, 0.139);
+            display: none;
+            align-items: center;
+            justify-content: space-around;
+            gap:50px
+        }
+        #earth{
+            height: 350px;
+            width:350px;
+        }
+        #weight-info{
+            height: 180px;
+            width:400px;
+            background-color: rgb(211, 211, 211, 0.139);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap:20px;
+        }
+        #weight-info1{
+            color:white;
+        }
+        #weight-info2{
+            height:100px;
+            width:100px; 
+            border-radius:50%; 
+            background-color:rgb(173, 172, 172); 
+            color:white;
+            padding:20px 0;
+        }
+        #errormessage{
+            width:60%;
+            margin-top:20px;
+            margin-left:270px;
+            padding:0 300px;
+            background-color: rgb(211, 211, 211, 0.139);    
+            display: none;
+            color:white;
+        }
+        
+    </style>
+</head>
+<body class="main-container">
+    <h1 id="heading">Calculate a weight of an object on a planet</h1>
+    <div class="upper">
+        <input type="text" placeholder="Mass in Kilogram" id="mass-info"/>
+        <select id="planets" >
+        <option value="">--select-planet-</option>
+        <option value="mercury">Mercury</option>
+        <option value="venus">Venus</option>
+        <option value="earth">Earth</option>
+        <option value="moon">Moon</option>
+        <option value="mars">Mars</option>
+        <option value="jupiter">Jupiter</option>
+        <option value="saturn">Saturn</option>
+        <option value="uranus">Uranus</option>
+        <option value="neptune">Neptune</option>
+        <option value="pluto">Pluto</option>
+        </select>
+        <button id="calculateweight">Calculate weight</button>
+    </div>
+    <div id="stable-earth">
+        <img style="width:400px;height: 400px;" src="https://raw.githubusercontent.com/geeksterin/WebCurriculum/master/Advance%20Js/Day-04/Project%20image/earth.png">
+    </div>
+    <div id="planet">
+        <img id="earth" src="https://raw.githubusercontent.com/geeksterin/WebCurriculum/master/Advance%20Js/Day-04/Project%20image/earth.png">
+        <div id="weight-info">
+            <span id="weight-info1">The weight of the object on <b>EARTH</b></span>
+            <div id="weight-info2" style="padding: 40px 0;">
+                <h3 >98.00 N</h3>
+            </div>
+        </div>
+    </div>
+    <div id="errormessage">
+        <h3>Inputs are required</h3>
+    </div>
+    <script>
+        //planet and errormessage
+        let select = document.getElementById("planet");
+        let errormessage = document.getElementById("errormessage");
+        const planetimage = document.getElementById("earth");
+        //inputs & button
+        const massInput = document.getElementById('mass-info');
+        const planetInput = document.getElementById('planets');
+        const calculateWeightbutton = document.getElementById("calculateweight");
+        //weight info
+        const weightinfo = document.getElementById('weight-info1');
+        const weightinfo2 = document.getElementById('weight-info2');
+        const stableEarth = document.getElementById("stable-earth");
+        let obj = {
+            mercury:3.59, 
+            venus:8.87,
+            earth:9.81,
+            moon: 1.62,
+            mars:3.77,
+            jupiter:25.95,
+            saturn:11.08,
+            uranus:10.67,
+            neptune:14.07,
+            pluto:0.42
+        }
+        calculateWeightbutton.addEventListener('click', ()=>{
+            let values = planetInput.value;
+            
+            let weight = (obj[planetInput.value]*(massInput.value)).toFixed(2)+" N";
+            if(massInput.value == "" || planetInput.value == ""){
+                stableEarth.style.display="none";         
+                errormessage.style.display="flex";
+                select.style.display="none";
+            }
+            else{
+                select.style.display="flex";
+                planetimage.setAttribute("src",`https://raw.githubusercontent.com/geeksterin/WebCurriculum/master/Advance%20Js/Day-04/Project%20image/${values}.png`);
+                values=values.toUpperCase();
+                weightinfo.innerText = `The weight of the object on ${values}`;
+                weightinfo2.innerText = `${weight}`;
+                errormessage.style.display="none";
+                stableEarth.style.display="none";
+            }
+        })
+    </script>
+</body>
 </html>
