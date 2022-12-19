@@ -4,9 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Players</title>
+    <link rel="stylesheet" href="./style.css"/>
   </head>
-  <body>
-    Start your code here
+  <body style="display: flex; justify-content:center;align-items:center;">
+    <div class="containers">
+      <h1 id="heading">30 Days of Javascript Challenge Leaderboard</h1>
+      <div class="insert-data">
+         
+              <input type="text" id="fname"  placeholder="First Name">
+              <input type="text" id="lname"  placeholder="Last Name" required>
+              <input type="text" id="cname"  placeholder="country" required>
+              <input type="number" id="score" placeholder="Player Score" required>
+         
+          <button type="submit" id="addplayer" >Add Player</button>
+      </div>
+      <br> <br>
+      <div id="addeddata" ></div>
+      <div id="container"></div>
+    </div>
+  <script src="./script.js"></script>
   </body>
 </html>
