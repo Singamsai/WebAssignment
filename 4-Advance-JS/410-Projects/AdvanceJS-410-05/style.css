@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    font-family: sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    background: linear-gradient(135deg, #ff938e, #ffe2c7);
+}
+#main_container{
+    width:500px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 3px 1px #ea1d1a;
+    background: #ffcbc0a2;
+    padding:5px;
+}
+#quote{
+    margin: 30px;
+}
+#writer{
+    margin-left: 250px;
+}
+#logo{
+    padding:10px;
+    display: flex;
+    justify-content: space-between;
+}
+#dove{
+    background-color: skyblue;
+    border: none;
+    color: #fff;
+    height:35px;
+}
+#next_quote{
+    background: linear-gradient(135deg, #ff938e, #ffe2c7);
+    color: #fff;
+    height:35px;
+}
+.ticks{
+    color:red;
+}
