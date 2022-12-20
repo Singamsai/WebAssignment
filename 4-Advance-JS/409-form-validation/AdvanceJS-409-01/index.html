@@ -1,12 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    Start your code here
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="./style.css"/>
+</head>
+<body>
+    <h1 class="heading"></h1>
+    <div class="field">
+        <label>First Name</label>
+        <input id="fname" type="text" placeholder="Enter your firstname" required/>
+    </div>
+    <p id="fname_text"></p>
+    <div class="field">
+        <label>Last Name</label>
+        <input id="lname" type="text" placeholder="Enter your lastname" required/>
+    </div>
+    <p id="lname_text"></p>
+    <div class="field"> 
+        <label>Email</label>
+        <input id="email" type="text" placeholder="Enter your email id" required/>
+    </div><p id="email_text"></p>
+    <div class="field">
+        <label>Password</label>
+        <input id="password" type="password" placeholder="password" required/>
+    </div><p id="password_text"></p>
+    <div class="field">
+        <label>Telephone</label>
+        <input id="telephone" type="number" placeholder="Enter your Telephone number" required/>
+    </div><p id="telephone_text"></p>
+    <div class="field">
+        <label>Your bio</label>
+        <input id="bio" type="text" placeholder="Bio" required/>
+    </div><p id="bio_text"></p>
+    <div class="button">
+        <button id="submit_button">Submit</button>  
+    </div>
+    <p id="success_msg"></p>
+    <script src="./script.js"></script>
+</body>
 </html>
