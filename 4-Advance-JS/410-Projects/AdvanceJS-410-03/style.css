@@ -10,10 +10,10 @@ body{
     padding: 64px;
 }
 #sub_heading{
-    margin-bottom: 32px;
+    margin:8px 0 32px 0;
 }
 #search_input{
-    width: 300px;
+    width: 500px;
     height: 30px;
     margin-bottom: 32px;
     padding:0 12px;
